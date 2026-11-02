@@ -84,19 +84,26 @@ Como se pode observar na imagem apresentada, a instância `player1` foi criada e
 Como se pode observar na imagem apresentada, após a execução do método de salvamento do CRUD, o estado da instância `player1` foi atualizado. O campo `id` agora exibe o valor `2`, o que comprova que o registo foi inserido com sucesso na tabela do banco de dados SQLite e o ORMLite atribuiu o identificador único gerado automaticamente (`generatedId = true`) de volta ao objeto.
 
 <img width="483" height="279" alt="image" src="https://github.com/user-attachments/assets/b74dc946-84cd-4d97-aeec-1000b6884085" />
+
 ---
+
 #### Operação de Read (Consulta e Persistência)
 Como se pode observar na imagem apresentada, após fechar o ambiente de desenvolvimento (BlueJ) e reabri-lo, realizou-se a busca por um ID previamente gravado no banco de dados. O sistema recuperou com sucesso os dados associados ao registo (`id`: 1, `Name`: "Aizen", `dinheiro`: 52.52, `lvl`: 24, `hp`: 202), o que comprova a persistência efetiva e duradoura dos dados através do ORMLite e SQLite mesmo após o encerramento da aplicação.
 
 <img width="622" height="332" alt="image" src="https://github.com/user-attachments/assets/636324ef-ada6-43c1-ac49-f246f5d87619" />
+
 ---
+
 #### Operação de Update 
 Como se pode observar na imagem apresentada logo abaixo, o registo existente com o `id`: 2 foi modificado através da operação de atualização do CRUD. Os atributos de `dinheiro` (que passou de `2.23` para `2000.0`) e de `hp` (que passou de `25` para `265`) foram alterados com sucesso e refletidos na base de dados.
 
 <img width="561" height="291" alt="image" src="https://github.com/user-attachments/assets/de3e953e-a693-4677-93cd-9141f7fa59a9" />
+
 ---
+
 #### Operação de Delete 
 Como se pode observar na imagem apresentada logo abaixo, após a execução da operação de exclusão do registo com o `id`: 2, tentou-se carregar novamente esse mesmo ID através do método `loadFromId(2)`. O resultado retornado foi `null`, o que comprova que o registo foi efetivamente removido da base de dados.
 
 <img width="375" height="242" alt="image" src="https://github.com/user-attachments/assets/119a73b9-8678-4b5a-8868-454ea90797aa" />
+
 ---
