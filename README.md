@@ -66,7 +66,23 @@ public class Player
         return this.hp;
     }
     public void setHp(int hp){
+
         this.hp = hp;
     }
 }
 ```
+
+### Comprovação das Operações CRUD
+
+#### Foto #1: Estado Inicial (Antes da Persistência)
+Como se pode observar na imagem apresentada, a instância `player1` foi criada e preenchida com os atributos iniciais (`Name`: "Ichigo", `dinheiro`: 2.23, `lvl`: 200, `hp`: 25). É possível inferir que o registo **ainda não está salvo no banco de dados**, pois o campo `id` exibe o valor `0`, indicando que o objeto existe apenas de forma volátil na memória RAM e ainda não passou pelo mapeamento de inserção do ORM.
+
+<img width="485" height="287" alt="image" src="https://github.com/user-attachments/assets/62ebe963-6f07-44a1-a379-f1af0ae35435" />
+
+---
+
+#### Foto #2: Operação de Create (Inserção)
+Como se pode observar na imagem apresentada, após a execução do método de salvamento do CRUD, o estado da instância `player1` foi atualizado. O campo `id` agora exibe o valor `2`, o que comprova que o registo foi inserido com sucesso na tabela do banco de dados SQLite e o ORMLite atribuiu o identificador único gerado automaticamente (`generatedId = true`) de volta ao objeto.
+
+<img width="483" height="279" alt="image" src="https://github.com/user-attachments/assets/b74dc946-84cd-4d97-aeec-1000b6884085" />
+
